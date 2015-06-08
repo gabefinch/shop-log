@@ -19,13 +19,9 @@ ActiveRecord::Schema.define(version: 20150608172311) do
   create_table "indices", force: :cascade do |t|
     t.integer  "number"
     t.boolean  "external"
+    t.integer  "lab_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "indices_labs", id: false, force: :cascade do |t|
-    t.integer "index_id", null: false
-    t.integer "lab_id",   null: false
   end
 
   create_table "labs", force: :cascade do |t|

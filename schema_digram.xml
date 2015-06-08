@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="200" y="129" name="Users">
+</datatypes><table x="299" y="19" name="Users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -54,7 +54,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="34" y="10" name="Labs">
+<table x="19" y="12" name="Labs">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -71,7 +71,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="314" y="47" name="Indices">
+<table x="41" y="140" name="Indices">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -81,11 +81,15 @@
 <row name="external" null="1" autoincrement="0">
 <datatype>bit</datatype>
 <default>NULL</default></row>
+<row name="lab_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Labs" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="449" y="31" name="Sessions">
+<table x="237" y="146" name="Sessions">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -110,23 +114,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="146" y="12" name="Indices-Labs">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="lab_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Labs" row="id" />
-</row>
-<row name="index_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Indices" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="32" y="154" name="Labs-Users">
+<table x="138" y="17" name="Labs-Users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
