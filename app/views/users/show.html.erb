@@ -1,11 +1,24 @@
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.card_number %>
-<% @user.labs.each do |lab| %>
-  <%= lab.name %>
-  <%= lab.pi_first %>
-  <%= lab.pi_last %>
-  <% lab.indices.each do |index| %>
-    <%= index.number %>
-  <% end %>
+<h3><%= @user.first_name  + " " + @user.last_name%></h3>
+<% if @user.labs %>
+<h4>Click on an index to begin a shop session.</h4>
+  <% @user.labs.each do |lab| %>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= lab.name %></h3>
+      </div>
+      <div class="panel-body">
+        <% lab.indices.each do |index| %>
+          <a href="#" class="btn btn-warning">
+            <%= index.number %>
+          </a>
+          <br><br>
+        <% end %>
+        <a href="#" class="btn btn-primary btn-sm">
+          Add index
+        </a>
+
+      </div>
+    </div>
+
+<% end %>
 <% end %>
