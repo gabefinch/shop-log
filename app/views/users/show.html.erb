@@ -1,1 +1,11 @@
-<%= @user %>
+<%= @user.first_name %>
+<%= @user.last_name %>
+<%= @user.card_number %>
+<% @user.labs.each do |lab| %>
+  <%= lab.name %>
+  <%= lab.pi_first %>
+  <%= lab.pi_last %>
+  <% lab.indices.each do |index| %>
+    <%= index.number %>
+  <% end %>
+<% end %>
