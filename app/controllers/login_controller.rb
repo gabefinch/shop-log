@@ -1,10 +1,8 @@
 class LoginController < ApplicationController
-  def wait_for_swipe
-
+  def cardswipe
+    card_id = params[:card_id]
+    @user = User.find_by card_number: card_id
+    render 'users/show'
   end
 
-    # if @user = User.find_by card_number(params[:card_number])
-    #   flash[:notice] = "Welcome " + @user.first_name + " " + @user.last_name + "."
-    #   render user#show
-    # end
 end
