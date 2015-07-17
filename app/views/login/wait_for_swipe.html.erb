@@ -1,16 +1,21 @@
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Swipe ID to Login</h3>
-  </div>
-  <div class="panel-body">
 
-    <%= form_tag "/cardswipe" do %>
-      <div class="form-group">
-        <%= text_field_tag :card_id%>
+  <img src="img/vintage3.gif" class="col-sm-3">
+  <div class="col-sm-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Swipe ID to Login</h3>
       </div>
-      <%= submit_tag "Login", class: "btn btn-warning"%>
-    <% end %>
+      <div class="panel-body">
+
+        <%= bootstrap_form_tag url: '/cardswipe' do |f| %>
+          <div class="form-group">
+            <%= f.text_field :card_id%>
+          </div>
+          <%= f.submit "Login", class: "btn btn-info"%>
+          <a class="btn btn-warning pull-right">Create New User</a>
+        <% end %>
 
 
+      </div>
+    </div>
   </div>
-</div>
