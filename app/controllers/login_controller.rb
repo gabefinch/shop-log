@@ -1,6 +1,5 @@
 class LoginController < ApplicationController
   def wait_for_swipe
-    @logged_in = false
   end
   def cardswipe
     card_id = params[:card_id]
