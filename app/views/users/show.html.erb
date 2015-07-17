@@ -1,4 +1,4 @@
-<h3><%= @user.first_name  + " " + @user.last_name%></h3>
+<h3 class="head"><%= @user.first_name  + " " + @user.last_name%></h3>
 <% if @user.labs %>
 <h4>Click on an index to begin a shop session.</h4>
   <% @user.labs.each do |lab| %>
