@@ -1,7 +1,7 @@
-<h3 class="head"><%= @user.first_name  + " " + @user.last_name%></h3>
-<% if @user.labs %>
+<h3 class="head"><%= current_user.first_name  + " " + current_user.last_name%></h3>
+<% if current_user.labs %>
 <h4>Click on an index to begin a shop session.</h4>
-  <% @user.labs.each do |lab| %>
+  <% current_user.labs.each do |lab| %>
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title"><%= lab.name %></h3>

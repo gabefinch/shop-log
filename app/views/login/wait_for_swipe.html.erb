@@ -9,7 +9,7 @@
 
         <%= bootstrap_form_tag url: '/cardswipe' do |f| %>
           <div class="form-group">
-            <%= f.text_field :card_id, :autofocus => true%>
+            <%= f.text_field :card_id, :autofocus => true, class: 'form-control', hide_label: true %>
           </div>
           <%= f.submit "Login", class: "btn btn-info"%>
           <a class="btn btn-warning pull-right">Create New User</a>
