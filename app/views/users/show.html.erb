@@ -1,0 +1,24 @@
+<h3 class="head"><%= current_user.first_name  + " " + current_user.last_name%></h3>
+<% if current_user.labs %>
+<h4>Click on an index to begin a shop session.</h4>
+  <% current_user.labs.each do |lab| %>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= lab.name %></h3>
+      </div>
+      <div class="panel-body">
+        <% lab.indices.each do |index| %>
+          <a href="#" class="btn btn-warning btn-block">
+            <%= index.number %>
+          </a>
+          <br>
+        <% end %>
+        <a href="#" class="btn btn-primary btn-block">
+          Add index
+        </a>
+
+      </div>
+    </div>
+
+<% end %>
+<% end %>

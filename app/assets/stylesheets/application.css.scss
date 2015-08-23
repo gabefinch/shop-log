@@ -14,5 +14,18 @@
  *= require_self
  */
  @import "bootstrap-sprockets";
- @import "bootswatch/paper/variables";
+ @import "bootswatch/superhero/variables";
  @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+
+.head {
+  font-weight: bold;
+}
+.navbar-default .navbar-brand {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87
+}
+img.avatar {
+  width: 3%;
+}
